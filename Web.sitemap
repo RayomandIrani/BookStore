@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title=""  description="">
+    <siteMapNode url="Default.aspx" title="HOME"  description="" />
+    <siteMapNode url="books.aspx" title="BOOKS"  description="">
+      <siteMapNode url="adventure.aspx" title="ADVENTURE"/>
+      <siteMapNode url="fantasy.aspx" title="FANTASY"/>
+      <siteMapNode url="science fiction.aspx" title="SCIENCE FICTION"/>
+      <siteMapNode url="mystery.aspx" title="MYSTERY"/>
+
+    </siteMapNode>
+    <siteMapNode url="about.aspx" title="ABOUT"  description="" >
+      <siteMapNode url="feedback.aspx" title="FEEDBACK" />
+    </siteMapNode>
+    <siteMapNode url="login.aspx" title="LOGIN"/>
+
+
+  </siteMapNode>
+</siteMap>

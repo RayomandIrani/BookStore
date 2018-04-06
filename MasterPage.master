@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs"  Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>The Book Store</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="App_Themes/Light/MasterStyle.css" rel="stylesheet" />
+    <style type="text/css">
+       
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+       
+            <div id="header" style="background-image:url(App_Themes/Light/headerCover.jpg)">
+            <p id="title">THE BOOK STORE</p>
+        </div>
+
+        
+        
+   <div id="navbar">
+       <asp:Menu ID="Menu1" runat="server" BackColor="#BEDDFE" BorderStyle="Solid" BorderWidth="2px" DataSourceID="SiteMapDataSource1" Height="50px" Orientation="Horizontal" Width="100%" OnMenuItemClick="Menu1_MenuItemClick">
+           <DynamicHoverStyle BackColor="#007ACC" BorderColor="Black" BorderStyle="Solid" BorderWidth="2px" ForeColor="White" />
+           <DynamicMenuItemStyle Font-Size="X-Large" ForeColor="Blue" Width="100%" BackColor="#98CBFD"  Font-Bold="True" Height="50px" VerticalPadding="10px" />
+           <DynamicMenuStyle Width="100%" />
+           <StaticHoverStyle BackColor="#007ACC" ForeColor="White" />
+           <StaticMenuItemStyle Font-Bold="True" Font-Size="X-Large" ForeColor="#2C4CFE" HorizontalPadding="120px" VerticalPadding="11px" />
+           <StaticMenuStyle BackColor="#BEDDFE" />
+       </asp:Menu>
+       <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+    </div>
+
+      
+    <div id="main">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <div id="footer">
+            
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="0.8em" PathSeparator=" : ">
+                <CurrentNodeStyle ForeColor="#333333" />
+                <NodeStyle Font-Bold="True" ForeColor="#284E98" />
+                <PathSeparatorStyle Font-Bold="True" ForeColor="#507CD1" />
+                <RootNodeStyle Font-Bold="True" ForeColor="#507CD1" />
+            </asp:SiteMapPath>
+            <asp:Label ID="visitorLabel" runat="server" Text=""></asp:Label>
+            <p style="text-align:center; font-family:'Times New Roman';font-weight:bold;">All rights Reserved 2017</p>
+
+        </div>
+    </form>
+</body>
+</html>
